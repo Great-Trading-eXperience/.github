@@ -31,7 +31,7 @@ GTX introduces a **Central Limit Order Book (CLOB)-based DEX** with:
 
 ## 🏗️ System Architecture
 
-![CLOB DEX Architecture](diagram.png)
+![CLOB DEX Architecture](../diagram.png)
 
 The CLOB DEX system consists of four main components:
 - **🔍 Router** - Entry point for all user interactions

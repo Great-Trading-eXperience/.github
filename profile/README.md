@@ -56,38 +56,38 @@ The CLOB DEX system consists of four main components:
 
 ---
 
-## 🏗️ More Details
+## 📖 More Details
 
 ### 💎 Core Features
 
 #### 🔄 Advanced Order Types
-- 📊 Limit Orders with precision pricing
-- ⚡ Instant Market Orders
-- 🎯 Smart order routing
+- **📊 Limit Orders** – Set precise pricing for trades.
+- **⚡ Market Orders** – Instant execution at the best available price.
+- **🎯 Smart Order Routing** – Optimized execution for best trade outcomes.
 
 #### ⚙️ High-Performance Engine
-- 🏃‍♂️ O(log n) matching algorithm
-- 📈 Price-time priority execution
-- 🔍 Real-time order book updates
-- 🔒 Atomic settlements
+- **🏃‍♂️ O(log n) Matching Algorithm** – Efficient trade matching.
+- **📈 Price-Time Priority Execution** – Ensures fair order processing.
+- **🔍 Real-Time Order Book Updates** – Continuous visibility into market movements.
+- **🔒 Atomic Settlements** – Ensures consistency and security in trades.
 
 ### 🏗️ Architecture Highlights
 
 #### 🌳 Red-Black Tree Price Levels
-- O(log n) operations for inserting/removing price levels
-- Quick access to best bid/ask prices
-- Ordered iteration through price levels
+- **O(log n) Operations** – Efficient price level insertions and removals.
+- **Quick Best Bid/Ask Access** – Fast retrieval of top market prices.
+- **Ordered Iteration** – Enables seamless market data traversal.
 
 #### 📜 Order Queues
-- Double-linked list for order storage at each price level
-- FIFO (First In, First Out) execution within same price level
-- Efficient order removal and updates
+- **Double-Linked List Structure** – Efficiently manages orders at each price level.
+- **FIFO Execution** – Ensures fair trade processing within the same price level.
+- **Efficient Order Updates** – Minimizes processing overhead.
 
 #### 🗃️ Data Storage Optimization
-- **Order Packing**: Compact order storage using bit manipulation
-  - Side (1 bytes) | Price (64 bytes) | OrderId (48 bytes)
-- **Active Order Tracking**: Per-user order tracking using EnumerableSet
-- **Price Level Management**: Automatic cleanup of empty price levels
+- **Order Packing** – Compact storage using bit manipulation.
+  - Side (1 byte) | Price (64 bytes) | OrderId (48 bytes)
+- **Active Order Tracking** – Per-user order tracking via `EnumerableSet`.
+- **Price Level Management** – Automatically removes empty price levels.
 
 ### 🔑 Key Data Structures
 ```solidity
@@ -102,42 +102,43 @@ mapping(address => EnumerableSet.UintSet) private activeUserOrders;
 ```
 
 ### 👀 View Functions
-- Get best bid/ask prices
-- View order queue status at any price level
-- Retrieve user's active orders
-- Get next best price levels with volumes
+- Retrieve **best bid/ask prices**.
+- Check **order queue status** at any price level.
+- View **user’s active orders**.
+- Fetch **next best price levels with trading volumes**.
 
 ### ⛽ Gas Optimization Techniques
+
 #### Efficient Storage
-- Minimal storage operations
-- Packed order data
-- Optimized mappings
+- **Minimal Storage Operations** – Reduces gas costs.
+- **Packed Order Data** – Optimized for efficiency.
+- **Optimized Mappings** – Prevents unnecessary storage use.
 
 #### Smart Data Structures
-- Red-Black Tree for price levels (O(log n) operations)
-- Double-linked lists for order management
-- EnumerableSet for tracking active orders
+- **Red-Black Tree for Price Levels** – O(log n) efficiency.
+- **Double-Linked Lists for Order Management** – Fast access and updates.
+- **EnumerableSet for Active Order Tracking** – Ensures efficient lookups.
 
 #### Memory Management
-- Strategic use of memory vs storage
-- Optimized array operations
-- Efficient event emission
+- **Strategic Memory vs. Storage Use** – Minimizes on-chain costs.
+- **Optimized Array Operations** – Reduces execution overhead.
+- **Efficient Event Emission** – Minimizes unnecessary gas usage.
 
 ### 🔒 Security Features
+
 #### Access Control
-- Order cancellation restricted to order owner
-- Reentrancy protection on all state-modifying functions
+- **Order Cancellation Restrictions** – Only order owners can cancel.
+- **Reentrancy Protection** – All state-changing functions are secured.
 
 #### Input Validation
-- Price and quantity validation
-- Order existence checks
-- Price level integrity checks
+- **Price & Quantity Checks** – Ensures valid order parameters.
+- **Order Existence Checks** – Prevents manipulation.
+- **Price Level Integrity** – Maintains a consistent order book.
 
 #### State Management
-- Atomic operations
-- Consistent state updates
-- Automatic cleanup of empty states
-
+- **Atomic Operations** – Ensures consistency across transactions.
+- **Consistent State Updates** – Prevents stale or orphaned data.
+- **Automatic Cleanup of Empty States** – Optimizes contract storage.
 ---
 
 ## 🔑 Contract Addresses
@@ -173,4 +174,3 @@ mapping(address => EnumerableSet.UintSet) private activeUserOrders;
 ## 📜 License
 
 GTX is open-source under the MIT License.
-

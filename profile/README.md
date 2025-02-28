@@ -47,6 +47,14 @@ The CLOB DEX system consists of four main components:
 - **OrderBook**: Handles order placement and matching using RB-Tree
 - **BalanceManager**: Manages token deposits, withdrawals, and locks
 
+---
+
+## 📡 Indexer Integration
+
+We use Ponder for indexing, which allows the frontend to easily query key data such as candlestick charts, pool balances, and listed markets. Ponder is chosen due to its simple setup, customizability, and compatibility with EVM chains. It is also self-hostable, ensuring greater control over the infrastructure.
+
+---
+
 ## 🔄 How It Works
 
 1. **👨‍💻 Traders** place buy/sell orders on the decentralized order book.

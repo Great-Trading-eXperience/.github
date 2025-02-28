@@ -29,10 +29,12 @@ GTX introduces a **Central Limit Order Book (CLOB)-based DEX** with:
 - **⚡ High-Frequency Trading Ready** – Supports traders placing orders with minimal delay.
 - **🛑 No Liquidity Providers (LPs) Needed** – Orders are matched peer-to-peer, removing LP dependency.
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
-GTX consists of:
+![CLOB DEX Architecture](diagram.png)
 
+The CLOB DEX system consists of four main components:
+- **🔍 Router** - Entry point for all user interactions
 - **⚡ Order Matching Engine** – Executes spot trades based on an efficient CLOB system.
 - **💾 Decentralized Order Book** – Ensures transparency and removes reliance on centralized entities.
 - **🔄 Peer-to-Peer Settlement** – On-chain settlement guarantees security and transparency.
@@ -44,9 +46,31 @@ GTX consists of:
 3. **💰 Protocol** earns trading fees when orders are matched in the order book.
 4. **🔄 Settlement** happens directly on-chain, ensuring security and transparency.
 
-## 🗺️ Roadmap
+## 🔑 Contract Addresses
 
-- **📌 Phase 1** – Testnet launch with core spot trading functionality.
-- **🔗 Phase 2** – User experience improvements and enhanced trading features.
-- **🌍 Phase 3** – Mainnet deployment and expansion to additional markets.
+### 📜 Deployed Contracts on RiseLabs Testnet
+
+- **OrderBook Contract**
+  - **Address:** `0x92D8387421fe5205051C82E4a6473E0aC5cc636b`
+  - [View on Explorer](https://testnet-explorer.riselabs.xyz/address/0x92D8387421fe5205051C82E4a6473E0aC5cc636b)
+
+- **BalanceManager Contract**
+  - **Address:** `0xf997fBd9747841513d26d895072a7f35e5125cfc`
+  - [View on Explorer](https://testnet-explorer.riselabs.xyz/address/0xf997fBd9747841513d26d895072a7f35e5125cfc)
+
+- **PoolManager Contract**
+  - **Address:** `0x2A61148905eA1cf87f352249DD92215C8eA0fdD5`
+  - [View on Explorer](https://testnet-explorer.riselabs.xyz/address/0x2A61148905eA1cf87f352249DD92215C8eA0fdD5)
+
+- **GTXRouter Contract**
+  - **Address:** `0xe0eCBC144f924bD5bA7C7D9b373795EFA2F3589B`
+  - [View on Explorer](https://testnet-explorer.riselabs.xyz/address/0xe0eCBC144f924bD5bA7C7D9b373795EFA2F3589B)
+
+### 🪙 Mock Token Addresses
+
+- **Mock USDC Contract**: [0x02950119C4CCD1993f7938A55B8Ab8384C3CcE4F](https://testnet-explorer.riselabs.xyz/address/0x02950119C4CCD1993f7938A55B8Ab8384C3CcE4F)
+- **Mock WETH Contract**: [0xb2e9Eabb827b78e2aC66bE17327603778D117d18](https://testnet-explorer.riselabs.xyz/address/0xb2e9Eabb827b78e2aC66bE17327603778D117d18)
+- **Mock WBTC Contract**: [0xc2CC2835219A55a27c5184EaAcD9b8fCceF00F85](https://testnet-explorer.riselabs.xyz/address/0xc2CC2835219A55a27c5184EaAcD9b8fCceF00F85)
+- **Mock Chainlink Contract**: [0x24b1ca69816247Ef9666277714FADA8B1F2D901E](https://testnet-explorer.riselabs.xyz/address/0x24b1ca69816247Ef9666277714FADA8B1F2D901E)
+- **Mock PEPE Contract**: [0x7FB2a815Fa88c2096960999EC8371BccDF147874](https://testnet-explorer.riselabs.xyz/address/0x7FB2a815Fa88c2096960999EC8371BccDF147874)
 

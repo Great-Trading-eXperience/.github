@@ -1,4 +1,4 @@
-# 🚀 GTX (Great Trading eXperience)
+# 🚀 GTX (Great Trading Xperience)
 
 ## 🌎 Overview
 
